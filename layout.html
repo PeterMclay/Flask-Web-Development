@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Website </title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/style2.css')}}">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<!-------------- NavBar ------------->
+  <header>
+    <div class="container">
+      <h1> Peter McLay </h1>
+      <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <div>
+    {% block content %}
+    {% endblock %}
+  </div>
+
+<!-------------- Footer ------------->
+  <footer class="foot">
+    <ul class="socialM">
+      <li><a class="dif" href="https://www.instagram.com/petermclay4/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i> </a> </li>
+      <li><a class= "dif" href="https://github.com/PeterMclay" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> </a> </li>
+    </ul>
+    <p> &#169 2018 - Peter McLay</p>
+  </footer>
+
+</body>
+</html>

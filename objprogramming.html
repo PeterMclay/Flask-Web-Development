@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class = "blog">
+	    <h1> Object Oriented Programming</h1>
+	    <div class = "content">
+	      <img src="../static/images/code3.jpg">
+	      <h3>Overview</h3>
+	      <p> In my second year of engineering I took my second computer science course, which focused on object oriented programming, data structures and an introduction to algorithms. Over the semester I had three major assignments which tested my ability to solve software problems using object oriented programming. </p>
+	      <p> The final assignment described below, was the hardest. I implemented pointers, arrays, stacks, queues, and an ordered list to simulate a card game. I got 100% on the assignment, the GitHub Repository can be found<strong><a href="https://github.com/PeterMclay/Object-Oriented-Programming-Assignment-3" target="_blank"> HERE </a></strong>. </p>
+	      <h3> Final Assignment </h3>
+	      <h5>Your Task: </h5>
+	      <p> In this assignment you will create a simulation of an card game called <strong>MATCH</strong> between multiple players. These players however are not very smart (or at least don’t have to be). </p>
+	      <h5>The Game: </h5>
+	      <ul>
+	        <li>Cards consist of a standard deck without face cards (No jacks, queens, or kings).</li>
+	        <li>Each card has a suit (diamond, spade, heart, club).</li>
+	        <li> Each card has a rank (1 through MAX) - Aces are 1. (Maximum ranks is specified by the user)</li>
+	        <li> Total of 4 x MAX cards </li>
+	      </ul>
+	      <h5> Game Simulation: </h5>
+	      <ul>
+	        <li>The user will specify the number of players (numPlayers)</li>
+	        <li>The user will specify the maximum rank (maxRank)</li>
+	        <li>At the start of the game numPlayers player objects will be created</li>
+	        <li>An <strong>array</strong> of cards will be created consisting of ALL (4 x maxRank) the cards of the deck</li>
+	        <li>Cards will be taken randomly from the array(until empty) and placed into a <strong>Queue</strong> that represents the deck pile</li>
+	        <li>6 cards for each player will then be taken from the deck pile and placed into the hand of each of the each player. The hand of each player must be an <stromg>OrderedList</stromg></li>
+	        <li>1 card will be taken from the deck pile and placed into the faceup pile. The faceup pile must be a <strong>Stack</strong> </li>
+	      </ul>
+	      <p>You will then loop UNTIL the game is finished (the game is finished when a player has no cards left in their hand) each player will have a turn. A turn consists of the following: </p>
+	      <ul>
+	        <li>Check to see if they have a card in their hand with the same rank as the card on the top of the face up pile. If <strong>true</strong> take that card out of their hand and place it on the face up pile.</li>
+	        <li>If the above fails check to see if they have a card in their hand the same suit as the card on top of the face up pile. If <strong>true</strong> take that card out of their hand and place it on the face up pile</li>
+	        <li> If both of the above fail draw a card from the deck pile (the hand will grow by one the deck will shrink by 1 after this action.</li>
+	        <li>If the deck pile runs out of cards take and save the top of the faceup pile. Then place all cards in the facedown pile into the deck pile. Finally place the card you saved back on top of the faceup pile. After this is complete the faceup pile will contain just a singular card.</li>
+	        <li>Check to see if the player has 1 card lef </li>
+	        <li>Finally check to see the player has 0 cards left and is the winner of the game</li>
+	        <p> After a player's turn is finished you must transfer control to next player and repeat the steps above until a player has 0 cards left.</p>
+	      </ul>
+	      <a href="https://github.com/PeterMclay/Object-Oriented-Programming-Assignment-3" target="_blank"> <h4>GitHub Repository</h4> </a>
+	    </div>
+	  </div>
+{% endblock content %}
